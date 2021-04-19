@@ -6,23 +6,23 @@
  **/
 
 
-void defined_delay () {
-
+void defined_delay()  {
+	
 	#pragma HLS inline
-    #pragma HLS PROTOCOL fixed
+        #pragma HLS PROTOCOL fixed
 	ap_wait();
 }
 
 
 uint32_t counter_test2 (const uint32_t clock_cycles) {
 
-    #ifdef __SYNTHESIS__
+        #ifdef __SYNTHESIS__
 	if (clock_cycles > 15) {
 
-		for (int i=0; i < clock_cycles - 15; i++) {
-				#pragma HLS unroll
-				defined_delay ();
-			}
+	for (int i=0; i < clock_cycles - 15; i++) {
+	#pragma HLS unroll
+	defined_delay();
+	   }
 	}
 
  #else
@@ -30,7 +30,7 @@ uint32_t counter_test2 (const uint32_t clock_cycles) {
  #endif
 
  return clock_cycles;
-
+	
 }
 
 
