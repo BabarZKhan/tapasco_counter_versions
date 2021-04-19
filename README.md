@@ -1,6 +1,8 @@
 # tapasco_counter_versions (test version)
 
-The original counter PE in TaPaSCo source code is currently developed in SystemC. Since Vitis HLS 2020.2 has no support for SystemC this repo contains an alternative version of TaPaSCo counter PE using only C/C++ pragmas of Vitis 2020.2. This is trial and test code. May be this will not be merged in the new release and finally the a counter PE deeloped in Bluespec will be used. 
+The original counter PE/kernel in TaPaSCo source code is currently developed in SystemC. Since Vitis HLS 2020.2 has no support for SystemC this repo contains an alternative version of TaPaSCo counter PE using only C/C++ pragmas of Vitis 2020.2. This is trial and test code. 
+
+May be this will not be merged in the new release and finally the counter PE/kernel written in Bluespec will be used. 
 
 Some brief information about these function-like MACROS.
   
