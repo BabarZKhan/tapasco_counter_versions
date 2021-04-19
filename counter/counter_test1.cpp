@@ -10,14 +10,14 @@
 
 uint32_t counter_test1(const uint32_t clock_cycles) {
 
+   #ifdef __SYNTHESIS__
 
-  #ifdef __SYNTHESIS__
+   if (clock_cycles > 15) {
 
-  if (clock_cycles > 15) {
-
-    #pragma HLS PROTOCOL fixed
-	ap_wait_n (clock_cycles - 15);
-    }
+   #pragma HLS PROTOCOL fixed
+   ap_wait_n (clock_cycles - 15);
+   
+   }
 
   #else
   usleep(clock_cycles);
